@@ -1,5 +1,5 @@
 # adb install termux-api.apk &> /dev/null
-pkg install pv -y &> /dev/null
+pkg install pv -y &>/dev/null
 clear
 Terminated() {
     clear
