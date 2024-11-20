@@ -1,5 +1,4 @@
-# adb install termux-api.apk &> /dev/null
-pkg install pv -y &>/dev/null
+cd
 clear
 printf "%s" "please pinch to adjust screen then enter:"
 read input
@@ -313,9 +312,9 @@ if [[ -z "$input" ]]; then
     printf "\n"
     files() {
         width=$(tput cols)
-        gum style $'** \033[1;96mVISIT THIS LINK\033[0m **' --width "$width" --height 1 --bold --align center
+        gum style $'** \033[1;38;5;209mVISIT THIS LINK\033[0m **' --width "$width" --height 1 --bold --align center
         printf "\n"
-        gum style $'\033[1;38;5;209mhttp://androidappslauncher.netlify.app/\033[0m' --width "$width" --height 1 --bold --align center
+        gum style $'\033[1;96mhttp://androidappslauncher.netlify.app/\033[0m' --width "$width" --height 1 --bold --align center
         printf "\n"
         gum style $'\033[1;96m↳\033[0m \033[1;94mENTER\033[0m -> \033[1;93mTYPE EXIT\033[0m -> \033[1;94mENTER\033[0m \033[1;96m↲\033[0m' --width "$width" --height 1 --bold --align center
         printf "\n"
@@ -358,59 +357,26 @@ if [[ -z "$input" ]]; then
                 printf "\n"
                 gum style $'\033[1;92mACTIVITIES INSTALLED ✔\033[0m' --width "$width" --height 1 --bold --align center
                 printf "\n"
-            elif [[ "$status" -eq 1 ]]; then
+                gum style $'\033[1;91m$$\033[0m\033[1;93mINSTALLATION HAS COMPLETED\033[0m\033[1;91m$$\033[0m' --width "$width" --height 1 --bold --align center
+                chmod +x aal.sh
                 printf "\n"
                 width=$(tput cols)
-                gum style $'\033[1;91mYOU ARE NOT CONNECTED WITH ADB\033[0m' --width "$width" --height 1 --bold --align center
+                gum style $'\033[1;38;5;124m✦ \033[0m\033[1;38;5;86mtype\033[0m \033[1;38;5;225msource aal.sh\033[0m\033[1;38;5;124m ✦\033[0m' --width "$width" --height 1 --bold --align center
+            elif [[ "$status" -eq 1 ]]; then
+                clear
                 printf "\n"
-                gum style $'\033[1;94mYOU CAN NOT INSTALL THIS APP\033[0m' --width "$width" --height 1 --bold --align center
+                width=$(tput cols)
+                gum style $'\033[1;91m😢 YOU ARE NOT CONNECTED WITH ADB 😢\033[0m' --width "$width" --height 1 --bold --align center
                 printf "\n"
-                gum style $'\033[1;93mCONNECT YOUR DEVICE WITH ADB\033[0m' --width "$width" --height 1 --bold --align center
+                gum style $'\033[1;92mTO INSTALL THIS APPLICATION\033[0m' --width "$width" --height 1 --bold --align center
                 printf "\n"
-                gum style $'\033[1;96mVISIT THIS LINK\033[0m' --width "$width" --height 1 --bold --align center
+                gum style $'\033[1;93mCONNECT YOUR DEVICE WITH ADB FIRST\033[0m' --width "$width" --height 1 --bold --align center
                 printf "\n"
-                gum style $'\033[1;92mhttp://androidappslauncher.netlify.app/\033[0m' --width "$width" --height 1 --bold --align center
+                gum style $'\033[1;38;5;209mVISIT THIS LINK\033[0m' --width "$width" --height 1 --bold --align center
+                printf "\n"
+                gum style $'\033[1;96mhttp://androidappslauncher.netlify.app/\033[0m' --width "$width" --height 1 --bold --align center
             fi
         fi
     }
     files
-    displaylist() {
-        clear
-        printf "\n"
-        gum style $'\033[1;38;5;214m✷ ✷ ✷ ✷ \033[0m\033[1;38;5;193mANDROID APPS LAUNCHER\033[0m\033[1;38;5;214m ✷ ✷ ✷ ✷\033[0m' --width "$width" --height 1 --bold --align center
-        printf "\n"
-        gum style $'\033[1;38;5;183m▣\033[0m \033[1;93mCHOOSE YOUR APPLICATION:\033[0m' --width "$width" --height 1 --bold --align left
-        appslist() {
-            mapfile -t arrLabel <label.txt
-            mapfile -t arrAct <act.txt
-            lengthofarrLabel="${#arrLabel[@]}"
-            lengthofarrAct="${#arrAct[@]}"
-            for ((i = 0; i < lengthofarrLabel; i++)); do
-                echo -e "\033[1;38;5;165m$((i + 1))\033[0m\033[1;38;5;156m.\033[0m\033[1;38;5;39m${arrLabel[$i]}\033[0m"
-            done
-            printf "\n"
-            gum style $'\033[1;38;5;124m✦ \033[0m\033[1;38;5;154mUSE SERIAL NUMBER TO LAUNCH THE APP\033[0m\033[1;38;5;124m ✦\033[0m' --width "$width" --height 1 --bold --align center
-
-        }
-        appslist
-    }
-    displaylist
-    setalias() {
-        rm -rf applist.sh
-        mapfile -t arrLabel <label.txt
-        mapfile -t arrAct <act.txt
-        lengthofarrLabel="${#arrLabel[@]}"
-        lengthofarrAct="${#arrAct[@]}"
-        echo -e "shopt -s expand_aliases" >applist.sh
-        for ((i = 0; i < lengthofarrLabel; i++)); do
-            echo -e "alias $((i + 1))='am start -n ${arrAct[$i]}'" >>applist.sh
-        done
-        echo -e "
-    chmod +x applist.sh
-    " >>applist.sh
-        printf "\n"
-        width=$(tput cols)
-        gum style $'\033[1;38;5;124m✦ \033[0m\033[1;38;5;86mtype\033[0m \033[1;38;5;225msource applist.sh\033[0m\033[1;38;5;124m ✦\033[0m' --width "$width" --height 1 --bold --align center
-    }
-    setalias
 fi
