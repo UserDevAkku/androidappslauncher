@@ -1,4 +1,5 @@
-cd
+echo -e "please wait for a while..."
+pkg install git -y &>/dev/null
 clear
 printf "%s" "please pinch to adjust screen then enter:"
 read input
@@ -36,6 +37,7 @@ if [[ -z "$input" ]]; then
         position=$(((column - length) / 2)) # getting the new width=pos to center the text acc to the text
         tput cup $row $position
     }
+    pkg uninstall git -y &>/dev/null
     string=$(echo -e $"list of all required packages:" | tr '[:lower:]' '[:upper:]')
     echo -e "\033[1;38;5;111m▣\033[0m \033[1;38;5;184m$string\033[0m"
     printf "\n"
