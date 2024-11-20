@@ -9,6 +9,7 @@ aal() {
         echo -e "alias $((i + 1))='am start -n ${arrAct[$i]} &>/dev/null'"
     done
     clear
+    cd
     printf "\n"
     gum style $'\033[1;38;5;214m✷ ✷ ✷ ✷ \033[0m\033[1;38;5;193mANDROID APPS LAUNCHER\033[0m\033[1;38;5;214m ✷ ✷ ✷ ✷\033[0m' --width "$width" --height 1 --bold --align center
     printf "\n"
