@@ -324,7 +324,7 @@ if [[ -z "$input" ]]; then
         printf "%s\n" $'\033[1;96mENTER\033[0m'
         read -s input
         if [[ -z "$input" ]]; then
-            IP=$(adb devices | head -n 2 | tail -n 1 | awk "{print \$1}") && adb -s "$IP" shell &>/dev/null
+            IP=$(adb devices &>/dev/null | head -n 2 | tail -n 1 | awk "{print \$1}") && adb -s "$IP" shell &>/dev/null
             status="$?"
             if [[ "$status" -eq 0 ]]; then
                 printf "\n"
