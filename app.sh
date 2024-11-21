@@ -144,6 +144,7 @@ if [[ -z "$input" ]]; then
                     ping -c 1 google.com &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
+                        echo -e "\033[0;90minstalling ncurses-utils\033[0m"
                         pkg install ncurses-utils -y &>/dev/null
                         status="$?"
                         if [[ "$status" -eq 0 ]]; then
@@ -164,6 +165,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
+                echo -e "\033[0;90minstalling gum\033[0m"
                     pkg install gum -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -183,6 +185,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
+                echo -e "\033[0;90minstalling android-tools\033[0m"
                     pkg install android-tools -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -202,6 +205,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
+                echo -e "\033[0;90minstalling aapt\033[0m"
                     pkg install aapt -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -221,6 +225,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
+                echo -e "\033[0;90minstalling whiptail\033[0m"
                     pkg install whiptail -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -240,6 +245,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
+                echo -e "\033[0;90minstalling termux-api\033[0m"
                     pkg install termux-api -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -259,6 +265,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
+                echo -e "\033[0;90minstalling parallel\033[0m"
                     pkg install parallel -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -278,6 +285,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
+                echo -e "\033[0;90minstalling git\033[0m"
                     pkg install git -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
