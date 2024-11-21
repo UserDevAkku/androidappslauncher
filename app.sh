@@ -371,9 +371,7 @@ if [[ -z "$input" ]]; then
                 printf "\n"
                 gum style $'\033[1;91m$$\033[0m\033[1;93mINSTALLATION HAS COMPLETED\033[0m\033[1;91m$$\033[0m' --width "$width" --height 1 --bold --align center
                 chmod +x aal.sh
-                printf "\n"
-                width=$(tput cols)
-                gum style $'\033[1;38;5;124m✦ \033[0m\033[1;38;5;86mtype\033[0m \033[1;38;5;225msource aal.sh\033[0m\033[1;38;5;124m ✦\033[0m' --width "$width" --height 1 --bold --align center
+                ./aal.sh
             elif [[ "$status" -eq 1 ]]; then
                 clear
                 printf "\n"
