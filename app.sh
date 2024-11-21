@@ -369,7 +369,7 @@ if [[ -z "$input" ]]; then
                 chmod +x aal.sh
                 ./aal.sh
                 printf "\n"
-                gum style \$'\033[1;38;5;124m✦ \033[0m\033[1;38;5;86mtype\033[0m \033[1;38;5;225msource appEnabler.sh\033[0m\033[1;38;5;124m ✦\033[0m' --width "\$width" --height 1 --bold --align center
+                gum style $'\033[1;38;5;124m✦ \033[0m\033[1;38;5;86mtype\033[0m \033[1;38;5;225msource appEnabler.sh\033[0m\033[1;38;5;124m ✦\033[0m' --width "$width" --height 1 --bold --align center
             elif [[ "$status" -eq 1 ]]; then
                 clear
                 printf "\n"
