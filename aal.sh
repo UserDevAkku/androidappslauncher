@@ -9,8 +9,8 @@ setalias() {
     for ((i = 0; i < lengthofarrLabel; i++)); do
         echo -e "alias $((i + 1))='am start -n ${arrAct[$i]} &>/dev/null'" >>appEnabler.sh
     done
-    cat <<'EOF' >>appEnabler.sh
-width=$(tput cols)
+    cat <<EOF >>appEnabler.sh
+width=\$(tput cols)
 showList() {
     clear
     cd
