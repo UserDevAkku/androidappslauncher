@@ -15,7 +15,9 @@ showList() {
     clear
     cd
     printf "\n"
-    gum style \$'\033[1;38;5;214m⏩⏩⏩ \033[0m\033[1;38;5;193mANDROID APPS LAUNCHER\033[0m\033[1;38;5;214m ⏪⏪⏪\033[0m' --width "\$width" --height 1 --bold --align center --padding 2 
+    gum style \$'🌹🌹\033[1;38;5;184mW E L C O M E\033[0m🌹🌹' --width "\$width" --height 1 --bold --align center 
+    printf "\n"
+    gum style \$'\033[1;38;5;193mANDROID APPS LAUNCHER\033[0m' --width "\$width" --height 1 --bold --align center 
     printf "\n"
     gum style \$'\033[1;38;5;183m▣\033[0m \033[1;93mCHOOSE YOUR APPLICATION:\033[0m' --width "\$width" --height 1 --bold --align left
     mapfile -t arrLabel <label.txt
