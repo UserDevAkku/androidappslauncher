@@ -1,8 +1,5 @@
 
 clear
-echo -e "please wait for a while..."
-pkg install git -y &>/dev/null
-clear
 printf "%s" "please pinch to adjust screen then enter:"
 read input
 if [[ -z "$input" ]]; then
