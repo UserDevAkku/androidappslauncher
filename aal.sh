@@ -27,10 +27,10 @@ showList() {
     lengthofarrLabel="\${#arrLabel[@]}"
     lengthofarrAct="\${#arrAct[@]}"
     for ((i = 0; i < lengthofarrLabel; i++)); do
-        echo -e "\033[1;38;5;165m\$((i + 1))\033[0m\033[1;38;5;156m.\033[0m\033[1;38;5;39m\${arrLabel[\$i]}\033[0m"
+        echo -e "\033[1;93m\$((i + 1))\033[0m\033[1;38;5;156m.\033[0m\033[1;38;5;39m\${arrLabel[\$i]}\033[0m"
     done
     printf "\n"
-    gum style \$'\033[1;38;5;124m✦ \033[0m\033[1;38;5;154mUSE SERIAL NUMBER TO LAUNCH THE APP\033[0m\033[1;38;5;124m ✦\033[0m' --width "\$width" --height 1 --bold --align center
+    gum style \$'\033[1;38;5;124m✦ \033[0m\033[1;93mUSE SERIAL NUMBER TO LAUNCH THE APP\033[0m\033[1;38;5;124m ✦\033[0m' --width "\$width" --height 1 --bold --align center
 }
 showList
 EOF
