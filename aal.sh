@@ -10,7 +10,7 @@ setalias() {
         echo -e "alias $((i + 1))='am start -n ${arrAct[$i]} &>/dev/null'" >>appEnabler.sh
     done
     cat <<'EOF' >>appEnabler.sh
-width=\$(tput cols)
+width=$(tput cols)
 showList() {
     clear
     cd
