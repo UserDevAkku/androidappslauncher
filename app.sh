@@ -364,12 +364,14 @@ if [[ -z "$input" ]]; then
                 cat act.txt | parallel --bar --keep-order 'echo {}'
                 printf "\n"
                 gum style $'\033[1;92mACTIVITIES INSTALLED ✔\033[0m' --width "$width" --height 1 --bold --align center
+                sleep 5s
+                clear
                 printf "\n"
-                gum style $'\033[1;91m$$\033[0m\033[1;93mINSTALLATION HAS COMPLETED\033[0m\033[1;91m$$\033[0m' --width "$width" --height 1 --bold --align center
+                gum style $'\033[1;91m🍹🍹\033[0m\033[1;93mINSTALLATION HAS COMPLETED\033[0m\033[1;91m🍹🍹\033[0m' --width "$width" --height 1 --bold --align center
                 chmod +x aal.sh
                 ./aal.sh
                 printf "\n"
-                gum style $'\033[1;38;5;124m✦ \033[0m\033[1;38;5;86mtype\033[0m \033[1;38;5;225m<source appEnabler.sh>\033[0m\033[1;38;5;124m ✦\033[0m' --width "$width" --height 1 --bold --align center
+                gum style $'\033[1;38;5;124m✦ \033[0m\033[1;96mENTER\033[0m \033[1;38;5;225msource appEnabler.sh\033[0m\033[1;38;5;124m ✦\033[0m' --width "$width" --height 1 --bold --align center
             elif [[ "$status" -eq 1 ]]; then
                 clear
                 printf "\n"
