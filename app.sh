@@ -1,4 +1,3 @@
-
 clear
 printf "%s" "please pinch to adjust screen then enter:"
 read input
@@ -164,7 +163,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                echo -e "\033[0;90minstalling gum\033[0m"
+                    echo -e "\033[0;90minstalling gum\033[0m"
                     pkg install gum -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -184,7 +183,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                echo -e "\033[0;90minstalling android-tools\033[0m"
+                    echo -e "\033[0;90minstalling android-tools\033[0m"
                     pkg install android-tools -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -204,7 +203,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                echo -e "\033[0;90minstalling aapt\033[0m"
+                    echo -e "\033[0;90minstalling aapt\033[0m"
                     pkg install aapt -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -224,7 +223,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                echo -e "\033[0;90minstalling whiptail\033[0m"
+                    echo -e "\033[0;90minstalling whiptail\033[0m"
                     pkg install whiptail -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -244,7 +243,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                echo -e "\033[0;90minstalling termux-api\033[0m"
+                    echo -e "\033[0;90minstalling termux-api\033[0m"
                     pkg install termux-api -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -264,7 +263,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                echo -e "\033[0;90minstalling parallel\033[0m"
+                    echo -e "\033[0;90minstalling parallel\033[0m"
                     pkg install parallel -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -284,7 +283,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                echo -e "\033[0;90minstalling git\033[0m"
+                    echo -e "\033[0;90minstalling git\033[0m"
                     pkg install git -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -369,6 +368,8 @@ if [[ -z "$input" ]]; then
                 gum style $'\033[1;91m$$\033[0m\033[1;93mINSTALLATION HAS COMPLETED\033[0m\033[1;91m$$\033[0m' --width "$width" --height 1 --bold --align center
                 chmod +x aal.sh
                 ./aal.sh
+                printf "\n"
+                gum style \$'\033[1;38;5;124m✦ \033[0m\033[1;38;5;86mtype\033[0m \033[1;38;5;225msource appEnabler.sh\033[0m\033[1;38;5;124m ✦\033[0m' --width "\$width" --height 1 --bold --align center
             elif [[ "$status" -eq 1 ]]; then
                 clear
                 printf "\n"
