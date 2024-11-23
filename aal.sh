@@ -29,6 +29,7 @@ showList() {
         echo -e "\033[1;93m\$((i + 1))\033[0m\033[1;38;5;156m.\033[0m\033[1;38;5;39m\${arrLabel[\$i]}\033[0m"
     done
     gum style \$'\033[1;38;5;124m✦ \033[0m\033[1;93mUSE SERIAL NUMBER TO LAUNCH THE APP\033[0m\033[1;38;5;124m ✦\033[0m' --width "\$width" --height 1 --bold --align center
+    cd
 }
 showList
 EOF
