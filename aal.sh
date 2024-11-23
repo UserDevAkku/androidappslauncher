@@ -13,7 +13,6 @@ setalias() {
 width=\$(tput cols)
 showList() {
     clear
-    cd
     printf "\n"
     gum style \$'🌹 \033[1;38;5;184mW E L C O M E\033[0m 🌹' --width "\$width" --height 1 --bold --align center 
     printf "\n"
