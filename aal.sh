@@ -14,11 +14,11 @@ width=\$(tput cols)
 showList() {
     clear
     printf "\n"
-    gum style \$'🌹 \033[1;38;5;184mW E L C O M E\033[0m 🌹' --width "\$width" --height 1 --bold --align center 
+    gum style \$'🌹 \033[1;92mW E L C O M E\033[0m 🌹' --width "\$width" --height 1 --bold --align center 
     printf "\n"
-    gum style \$'🌹 \033[1;38;5;184mTO\033[0m 🌹' --width "\$width" --height 1 --bold --align center 
+    gum style \$'🌹 \033[1;92mTO\033[0m 🌹' --width "\$width" --height 1 --bold --align center 
     printf "\n"
-    gum style \$'🌹 \033[1;38;5;184mANDROID APPS LAUNCHER\033[0m 🌹' --width "\$width" --height 1 --bold --align center 
+    gum style \$'🌹 \033[1;92mANDROID APPS LAUNCHER\033[0m 🌹' --width "\$width" --height 1 --bold --align center 
     printf "\n"
     gum style \$'\033[1;38;5;183m▣\033[0m \033[1;93mCHOOSE YOUR APPLICATION:\033[0m' --width "\$width" --height 1 --bold --align left
     mapfile -t arrLabel <label.txt
@@ -26,7 +26,7 @@ showList() {
     lengthofarrLabel="\${#arrLabel[@]}"
     lengthofarrAct="\${#arrAct[@]}"
     for ((i = 0; i < lengthofarrLabel; i++)); do
-        echo -e "\033[1;93m\$((i + 1))\033[0m\033[1;38;5;156m.\033[0m\033[1;38;5;39m\${arrLabel[\$i]}\033[0m"
+        echo -e "\033[1;93m\$((i + 1))\033[0m\033[1;97m.\033[0m\033[1;96m\${arrLabel[\$i]}\033[0m"
     done
     gum style \$'\033[1;38;5;124m✦ \033[0m\033[1;93mUSE SERIAL NUMBER TO LAUNCH THE APP\033[0m\033[1;38;5;124m ✦\033[0m' --width "\$width" --height 1 --bold --align center
     cd

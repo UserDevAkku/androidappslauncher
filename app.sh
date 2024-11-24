@@ -36,35 +36,35 @@ if [[ -z "$input" ]]; then
         tput cup $row $position
     }
     string=$(echo -e $"list of all required packages:" | tr '[:lower:]' '[:upper:]')
-    echo -e "\033[1;38;5;111m▣\033[0m \033[1;38;5;184m$string\033[0m"
+    echo -e "\033[1;96m▣\033[0m \033[1;96m$string\033[0m"
     printf "\n"
     #list of required packages
     title=$(echo -e $'ncurses-utils' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
     printf "\n"
     title=$(echo -e $'gum' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
     printf "\n"
     title=$(echo -e $'android-tools' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
     printf "\n"
     title=$(echo -e $'aapt' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
     printf "\n"
     title=$(echo -e $'whiptail' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
     printf "\n"
     title=$(echo -e $'termux-api' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
     printf "\n"
     title=$(echo -e $'parallel' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
     printf "\n"
     title=$(echo -e $'git' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
     printf "\n"
     packagesNOT() {
-        printf "%s\n" $'\033[1;38;5;187m▣\033[0m \033[1;38;5;184mChecking availability of packages:\033[0m' | pv -qL 25
+        printf "%s\n" $'\033[1;38;5;187m▣\033[0m \033[1;96mChecking availability of packages:\033[0m' | pv -qL 25
         printf "\n"
         sleep 2s
         command -v tput -y &>/dev/null
@@ -130,7 +130,7 @@ if [[ -z "$input" ]]; then
         status="$?"
         if [[ "$status" -eq 1 ]]; then
             printf "\n"
-            printf "%s" $'\033[1;38;5;121m▣\033[0m \033[1;38;5;141mProceed to install required pkges:\033[0m' | pv -qL 25
+            printf "%s" $'\033[1;38;5;121m▣\033[0m \033[1;97mProceed to install required pkges:\033[0m' | pv -qL 25
             printf "%s\n" $'\033[1;96mENTER\033[0m'
             printf "\n"
             read -s input
@@ -302,20 +302,20 @@ if [[ -z "$input" ]]; then
     packages
     printf "\n"
     string=$(echo -e $"list of all required files:" | tr '[:lower:]' '[:upper:]')
-    echo -e "\033[1;38;5;183m▣\033[0m \033[1;38;5;184m$string\033[0m"
+    echo -e "\033[1;38;5;183m▣\033[0m \033[1;96m$string\033[0m"
     printf "\n"
     #list of required files
     title=$(echo -e $'package names' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;177m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;93m$title\033[0m"
     printf "\n"
     title=$(echo -e $'paths' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;177m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;93m$title\033[0m"
     printf "\n"
     title=$(echo -e $'labels' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;177m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;93m$title\033[0m"
     printf "\n"
     title=$(echo -e $'activities' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;38;5;156m+\033[0m]\033[1;38;5;177m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;93m$title\033[0m"
     printf "\n"
     files() {
         width=$(tput cols)
@@ -325,7 +325,7 @@ if [[ -z "$input" ]]; then
         printf "\n"
         gum style $'\033[1;96m↳\033[0m \033[1;94mENTER\033[0m -> \033[1;93mTYPE EXIT\033[0m -> \033[1;94mENTER\033[0m \033[1;96m↲\033[0m' --width "$width" --height 1 --bold --align center
         printf "\n"
-        printf "%s" $'\033[1;38;5;154m▣\033[0m \033[1;38;5;168mproceed to install required files:\033[0m' | pv -qL 25
+        printf "%s" $'\033[1;38;5;154m▣\033[0m \033[1;97mproceed to install required files:\033[0m' | pv -qL 25
         printf "%s\n" $'\033[1;96mENTER\033[0m'
         read -s input
         if [[ -z "$input" ]]; then
