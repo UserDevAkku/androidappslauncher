@@ -40,28 +40,28 @@ if [[ -z "$input" ]]; then
     printf "\n"
     #list of required packages
     title=$(echo -e $'ncurses-utils' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;96m$title\033[0m"
     printf "\n"
     title=$(echo -e $'gum' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;96m$title\033[0m"
     printf "\n"
     title=$(echo -e $'android-tools' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;96m$title\033[0m"
     printf "\n"
     title=$(echo -e $'aapt' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;96m$title\033[0m"
     printf "\n"
     title=$(echo -e $'whiptail' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;96m$title\033[0m"
     printf "\n"
     title=$(echo -e $'termux-api' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;96m$title\033[0m"
     printf "\n"
     title=$(echo -e $'parallel' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;96m$title\033[0m"
     printf "\n"
     title=$(echo -e $'git' | tr '[:lower:]' '[:upper:]')
-    echo -e "[\033[1;93m+\033[0m]\033[1;38;5;111m$title\033[0m"
+    echo -e "[\033[1;93m+\033[0m]\033[1;96m$title\033[0m"
     printf "\n"
     packagesNOT() {
         printf "%s\n" $'\033[1;38;5;187m▣\033[0m \033[1;96mChecking availability of packages:\033[0m' | pv -qL 25
