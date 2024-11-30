@@ -326,7 +326,7 @@ if [[ -z "$input" ]]; then
         gum style $'\033[1;96m↳\033[0m \033[1;94mENTER\033[0m -> \033[1;93mTYPE EXIT\033[0m -> \033[1;94mENTER\033[0m \033[1;96m↲\033[0m' --width "$width" --height 1 --bold --align center
         printf "\n"
         printf "%s" $'\033[1;38;5;154m▣\033[0m \033[1;97mproceed to install required files:\033[0m' | pv -qL 25
-        printf "%s\n" $'\033[1;90mENTER\033[0m'
+        printf "%s\n" $'\033[1;90`  mENTER\033[0m'
         read -s input
         if [[ -z "$input" ]]; then
             IP=$(adb devices &>/dev/null | head -n 2 | tail -n 1 | awk "{print \$1}") && adb -s "$IP" shell &>/dev/null
