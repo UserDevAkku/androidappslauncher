@@ -64,7 +64,7 @@ if [[ -z "$input" ]]; then
     echo -e "[\033[1;93m+\033[0m]\033[1;93m$title\033[0m"
     printf "\n"
     packagesNOT() {
-        printf "%s\n" $'\033[1;38;5;187m▣\033[0m \033[1;97mChecking availability of packages:\033[0m' |  
+        printf "%s\n" $'\033[1;38;5;187m▣\033[0m \033[1;97mChecking availability of packages:\033[0m' 
         printf "\n"
         sleep 2s
         command -v tput -y &>/dev/null
@@ -130,7 +130,7 @@ if [[ -z "$input" ]]; then
         status="$?"
         if [[ "$status" -eq 1 ]]; then
             printf "\n"
-            printf "%s" $'\033[1;38;5;121m▣\033[0m \033[1;97mProceed to install required pkges:\033[0m' |  
+            printf "%s" $'\033[1;38;5;121m▣\033[0m \033[1;97mProceed to install required pkges:\033[0m' 
             printf "%s\n" $'\033[1;90mENTER\033[0m'
             printf "\n"
             read -s input
@@ -141,7 +141,6 @@ if [[ -z "$input" ]]; then
                     ping -c 1 google.com &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
-                        echo -e "\033[0;90minstalling ncurses-utils\033[0m"
                         pkg install ncurses-utils -y &>/dev/null
                         status="$?"
                         if [[ "$status" -eq 0 ]]; then
@@ -162,7 +161,6 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                    echo -e "\033[0;90minstalling gum\033[0m"
                     pkg install gum -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -182,7 +180,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                    echo -e "\033[0;90minstalling android-tools\033[0m"
+                    
                     pkg install android-tools -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -202,7 +200,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                    echo -e "\033[0;90minstalling aapt\033[0m"
+                    
                     pkg install aapt -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -222,7 +220,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                    echo -e "\033[0;90minstalling whiptail\033[0m"
+                    
                     pkg install whiptail -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -242,7 +240,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                    echo -e "\033[0;90minstalling termux-api\033[0m"
+                    
                     pkg install termux-api -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -262,7 +260,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                    echo -e "\033[0;90minstalling parallel\033[0m"
+                    
                     pkg install parallel -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -282,7 +280,7 @@ if [[ -z "$input" ]]; then
                 ping -c 1 google.com &>/dev/null
                 status="$?"
                 if [[ "$status" -eq 0 ]]; then
-                    echo -e "\033[0;90minstalling git\033[0m"
+                    
                     pkg install git -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
@@ -325,7 +323,7 @@ if [[ -z "$input" ]]; then
         printf "\n"
         gum style $'\033[1;96m↳\033[0m \033[1;94mENTER\033[0m -> \033[1;93mTYPE EXIT\033[0m -> \033[1;94mENTER\033[0m \033[1;96m↲\033[0m' --width "$width" --height 1 --bold --align center
         printf "\n"
-        printf "%s" $'\033[1;38;5;154m▣\033[0m \033[1;97mproceed to install required files:\033[0m' |  
+        printf "%s" $'\033[1;38;5;154m▣\033[0m \033[1;97mproceed to install required files:\033[0m' 
         printf "%s\n" $'\033[1;90`  mENTER\033[0m'
         read -s input
         if [[ -z "$input" ]]; then
