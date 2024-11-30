@@ -204,7 +204,7 @@ if [[ -z "$input" ]]; then
                     pkg install aapt -y &>/dev/null
                     status="$?"
                     if [[ "$status" -eq 0 ]]; then
-                        printf "%s\n" $'\033[1;97m◉\033[0m \033[1;38;5;187maapt installed\033[0m \033[1;92m✔\033[0m'
+                        printf "%s\n" $'\033[1;97m◉\033[0m\033[1;38;5;187maapt installed\033[0m \033[1;92m✔\033[0m'
                         sleep 1s
                     elif [[ "$status" -eq 1 ]]; then
                         echo -e "\033[1;97m◉\033[0m \033[96mPLEASE CHECK YOUR INTERNET CONNECTION ●\033[0m"
@@ -324,7 +324,7 @@ if [[ -z "$input" ]]; then
         gum style $'\033[1;96m↳\033[0m \033[1;94mENTER\033[0m -> \033[1;93mTYPE EXIT\033[0m -> \033[1;94mENTER\033[0m \033[1;96m↲\033[0m' --width "$width" --height 1 --bold --align center
         printf "\n"
         printf "%s" $'\033[1;38;5;154m▣\033[0m \033[1;97mproceed to install required files:\033[0m' 
-        printf "%s\n" $'\033[1;90`  mENTER\033[0m'
+        printf "%s\n" $'\033[1;90mENTER\033[0m'
         read -s input
         if [[ -z "$input" ]]; then
             IP=$(adb devices &>/dev/null | head -n 2 | tail -n 1 | awk "{print \$1}") && adb -s "$IP" shell &>/dev/null
