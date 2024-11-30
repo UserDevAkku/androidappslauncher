@@ -9,8 +9,6 @@ setalias() {
     for ((i = 0; i < lengthofarrLabel; i++)); do
         echo -e "alias $((i + 1))='am start -n ${arrAct[$i]} &>/dev/null'" >>appEnabler.sh
     done
-    cat label.txt | tr '[:upper:]' '[:lower:]' >label.txt
-    awk -F '{print $1}' <label.txt >label.txt
     cat label.txt
     cat <<EOF >>appEnabler.sh
 width=\$(tput cols)
